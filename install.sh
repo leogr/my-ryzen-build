@@ -30,7 +30,7 @@ mount ${BOOT_DEV} /mnt/boot
 pacstrap /mnt base base-devel linux linux-firmware linux-headers \
     amd-ucode efibootmgr mkinitcpio \
     mesa xf86-video-amdgpu vulkan-radeon libva-mesa-driver mesa-vdpau libva-vdpau-driver \ 
-    man zsh git nano dialog 
+    man htop radeontop zsh git
 
 # Generate fstab and chroot into /mnt
 genfstab -pU /mnt >> /mnt/etc/fstab
