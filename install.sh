@@ -37,6 +37,8 @@ genfstab -pU /mnt >> /mnt/etc/fstab
 # Copy /boot
 cp -R ./boot /mnt/boot
 
+# Copy /etc
+cp -R ./etc /mnt/etc
 
 # todo(leogr): run the root script
 arch-chroot /mnt
