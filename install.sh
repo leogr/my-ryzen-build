@@ -34,8 +34,9 @@ pacstrap /mnt base base-devel linux linux-firmware linux-headers \
 # Generate fstab and chroot into /mnt
 genfstab -pU /mnt >> /mnt/etc/fstab
 
-# todo(leogr): copy files to /mnt/root 
-# cp -R ../ /mnt/root/
+# Copy /boot
+cp -R ./boot /mnt/boot
+
 
 # todo(leogr): run the root script
 arch-chroot /mnt
