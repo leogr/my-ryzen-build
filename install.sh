@@ -29,8 +29,7 @@ mount ${BOOT_DEV} /mnt/boot
 # Install the base packages, firmware, and drivers
 pacstrap /mnt base base-devel linux linux-firmware linux-headers \
     amd-ucode efibootmgr mkinitcpio \
-    mesa xf86-video-amdgpu vulkan-radeon libva-mesa-driver mesa-vdpau libva-vdpau-driver \ 
-    man htop radeontop zsh git
+    mesa xf86-video-amdgpu vulkan-radeon libva-mesa-driver mesa-vdpau libva-vdpau-driver
 
 # Generate fstab and chroot into /mnt
 genfstab -pU /mnt >> /mnt/etc/fstab
