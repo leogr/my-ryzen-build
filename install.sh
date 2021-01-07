@@ -44,6 +44,10 @@ cp -R ./boot /mnt/boot
 cp -R ./etc /mnt/etc
 
 # Chroot setup
-cp ./chroot_setup.sh /mnt/tmp/chroot_setup.sh
-cp ./pkglist.txt /mnt/tmp/pkglist.txt
-arch-chroot /mnt /tmp/chroot_setup.sh
+cp ./chroot_setup.sh /mnt/root/chroot_setup.sh
+cp ./pkglist.txt /mnt/root/pkglist.txt
+arch-chroot /mnt /root/chroot_setup.sh
+
+# Clenaup
+rm -rf /mnt/root/chroot_setup.sh
+rm -rf /mnt/root/pkglist.txt
