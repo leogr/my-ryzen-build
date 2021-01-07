@@ -4,7 +4,7 @@ set -xeuo pipefail
 BOOT_DEV=/dev/nvme0n1p1
 ROOT_DEV=/dev/nvme0n1p2
 
-# Format the underlying partition
+# Format the root partition
 mkfs.ext2 ${ROOT_DEV}
 
 # Setup the encryption of the system
@@ -21,6 +21,9 @@ mkfs.ext4 /dev/mapper/vg0-root
 
 # Mount root filesystem
 mount /dev/mapper/vg0-root /mnt
+
+# Format the EFI partition
+mkfs.fat ${BOOT_DEV}
 
 # Mount shared EFI
 mkdir /mnt/boot
