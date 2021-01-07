@@ -10,3 +10,4 @@ network-manager-applet
 networkmanager
 pacman-contrib
 pavucontrol
+zsh
