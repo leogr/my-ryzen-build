@@ -40,5 +40,7 @@ cp -R ./boot /mnt/boot
 # Copy /etc
 cp -R ./etc /mnt/etc
 
-# todo(leogr): run the root script
-arch-chroot /mnt
+# Chroot setup
+cp ./chroot_setup.sh /mnt/tmp/chroot_setup.sh
+cp ./pkglist.txt /mnt/tmp/pkglist.txt
+arch-chroot /mnt /tmp/chroot_setup.sh
