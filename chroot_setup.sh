@@ -26,6 +26,7 @@ cat $BOOT_LOADER_ENTRY
 # mkinitcpio -c /etc/mkinitcpio.conf -g /boot/initramfs-linux.img
 
 echo "$ECHO_PREFIX Install packages (pkglist.txt)"
+pacman -Syu archlinux-keyring
 pacman -Syu - < /root/pkglist.txt
 
 echo "$ECHO_PREFIX Setup root pass"
