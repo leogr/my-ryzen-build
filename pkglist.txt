@@ -23,7 +23,6 @@ noto-fonts
 npm
 pacman-contrib
 pavucontrol
-radeontop
 seahorse
 stow
 stow
