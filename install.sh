@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -xeuo pipefail
 
-BOOT_DEV ?= /dev/nvme0n1p1
-ROOT_DEV ?= /dev/nvme0n1p2
+BOOT_DEV=/dev/nvme0n1p1
+ROOT_DEV=/dev/nvme0n1p2
 
 # Format the underlying partition
 mkfs.ext2 ${ROOT_DEV}

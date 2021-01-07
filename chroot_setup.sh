@@ -2,7 +2,7 @@
 set -xeuo pipefail
 
 USER=leogr
-ROOT_DEV ?= /dev/nvme0n1p2
+ROOT_DEV=/dev/nvme0n1p2
 BOOT_LOADER_ENTRY=/boot/loader/entries/arch.conf
 ECHO_PREFIX=">>> my-ryzen-build: "
 
