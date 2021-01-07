@@ -23,7 +23,7 @@ mkfs.ext4 /dev/mapper/vg0-root
 mount /dev/mapper/vg0-root /mnt
 
 # Format the EFI partition
-mkfs.fat ${BOOT_DEV}
+mkfs.fat -F32 ${BOOT_DEV}
 
 # Mount shared EFI
 mkdir /mnt/boot
