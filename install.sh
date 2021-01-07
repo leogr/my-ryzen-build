@@ -38,10 +38,10 @@ pacstrap /mnt base base-devel linux linux-firmware linux-headers \
 genfstab -pU /mnt >> /mnt/etc/fstab
 
 # Copy /boot
-cp -R ./boot /mnt/boot
+cp -R ./boot/* /mnt/boot
 
 # Copy /etc
-cp -R ./etc /mnt/etc
+cp -R ./etc/* /mnt/etc
 
 # Chroot setup
 cp ./chroot_setup.sh /mnt/root/chroot_setup.sh
