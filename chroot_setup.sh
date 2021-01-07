@@ -36,12 +36,10 @@ echo "$ECHO_PREFIX Add user ($USER)"
 useradd -m -g users -G wheel -s /usr/bin/zsh $USER
 passwd $USER
 sed --in-place 's/^#\s*\(%wheel\s\+ALL=(ALL)\s\ALL\)/\1/' /etc/sudoers
-usermod -aG docker $USER
 
 echo "$ECHO_PREFIX Enable systemd services"
 systemctl enable NetworkManager.service
 systemctl enable bluetooth.service
 systemctl enable gdm
-systemctl enable docker.service
 
 echo "$ECHO_PREFIX DONE!"
